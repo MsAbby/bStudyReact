@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import AppRouter from './page/AppRouter';
+// import AppRouter from './page/AppRouter';
+// import AppRouterPage from './page/AppRouter/AppRouterPage'; // react-router-dom
+import App from './App';
 
 // // 01 react-redux
 
@@ -17,4 +19,5 @@ import AppRouter from './page/AppRouter';
 // ReactDOM.render(App, document.getElementById('root'));
 
 // // 02 react-router-dom
-ReactDOM.render(<AppRouter/>,document.getElementById('root'))
+// ReactDOM.render(<AppRouter/>,document.getElementById('root'))
+ReactDOM.render(<App/>,document.getElementById('root'))

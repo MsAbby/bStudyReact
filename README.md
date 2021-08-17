@@ -29,7 +29,19 @@
 
   ## react-router 路由
   01 安装： npm i -S react-router-dom <br>
-  02 路由： 也是无状态组件
-  03 BrowerRouter: 路由器
-  04 Route: 线路
-  05 Link： 跳转
+  02 路由： 也是无状态组件<br>
+  03 BrowerRouter: 路由器<br>
+  04 Route: 线路<br>
+  05 Link： 跳转<br>
+  06 ReactRouter精确匹配和页面分离： exact 精确匹配 <br>
+
+  ## react-router 路由-动态传值
+  01 动态传值定义： /list/:id
+
+  ## react-router 路由重定向redirect
+  01 基本跳转和重定向区别： 重定向不可前进后退
+  02 编程式重定向： this.props.history.push('/home')
+
+  ## redirect-router 嵌套路由
+  01 什么是嵌套路由： 一级二级路由（中台系统）
+  

@@ -1,0 +1,10 @@
+.main-div {
+    display: flex;
+    justify-content: flex-start;
+}
+.main-left {
+    width: 300px;
+}
+.main-right { 
+    width: 100%;
+}
