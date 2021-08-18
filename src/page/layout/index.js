@@ -8,26 +8,35 @@ import History from './workplace/history.js'
 import Videos from './video.js'
 class Layout extends Component {
     render() { 
+        let routeConfig = [
+            {path: '/', title:"语文", exact: true, component:Chineses},
+            {path: "/maths", title:"数学", exact: true, component:Maths},
+            {path: "/english", title:"英语", exact: true, component:English},
+            {path: "/history", title:"历史", exact: true, component:History},
+            {path: "/mix", title:"混合", exact: true, component:Videos},
+        ]
         return (  
            <Router>
                <div className="main-div">
                     <div className="main-left">
                         <h3>一级导航</h3>
                         <ul>
-                            <li><Link to="/chinese">语文</Link></li>
-                            <li><Link to="/maths">数学</Link></li>
-                            <li><Link to="/english">英语</Link></li>
-                            <li><Link to="/history">历史</Link></li>
-                            <li><Link to="/mix">混合</Link></li>
+                            {routeConfig.map((item, index)=> {
+                                return (
+                                    <li key={index}><Link to={item.path}>{item.title}</Link></li>
+                                )
+                            })}
                         </ul>
                     </div>
                     <div className="main-right">
                         <h3>这是内容</h3>
-                        <Route path="/chinese" component={Chineses}></Route>
-                        <Route path="/maths" component={Maths}></Route>
-                        <Route path="/english" component={English}></Route>
-                        <Route path="/history" component={History}></Route>
-                        <Route path="/mix" component={Videos}></Route>
+                        {routeConfig.map((item, index)=> {
+                                return (
+                                    <Route path={item.path} exact={item.exact} component={item.component}></Route>
+                                )
+                            })}
+                        
+                       
                     </div>
                </div>
            </Router>
